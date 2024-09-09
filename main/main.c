@@ -62,6 +62,7 @@ void app_main(void)
     adc1_config_width(ADC_WIDTH_BIT_12);  // 12-bit width
     adc1_config_channel_atten(HALL_SENSOR_ADC_CHANNEL, ADC_ATTEN_DB_11);
 
+    // Limit motor power to a half to be sure that ESC will survice this ride
     float maxRange = DUTY_CYCLE_MIN + (DUTY_CYCLE_MAX - DUTY_CYCLE_MIN) / 2;
 
     float duty_cycle_range = maxRange - DUTY_CYCLE_MIN;
